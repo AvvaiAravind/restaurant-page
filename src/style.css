@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap");
+
+/* Basic Reset */
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+p,
+h1,
+h2 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+/* Basic Styling */
+
+:root {
+  --yellow: rgb(255, 198, 11);
+  --green: #85ae85;
+  --light-blue: #0a95ff;
+  --dark-blue: #230aff;
+  --purple: #7766ff;
+  --lilac: #aaa0ff;
+  --dark-orange: #df880a;
+  --chocolate: #c16a08;
+  --khaki: #ffde73;
+  --dripping-clr: rgb(236, 164, 59);
+}
+
+html {
+  background: url(https://web.archive.org/web/20221024061038im_/https://eckben.github.io/bearysBreakfastBar/img/643.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Yusei Magic", sans-serif;
+  overflow-x: hidden;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.header,
+.footer {
+  padding: 2.5px 2.5px 0 2.5px;
+  background-color: var(--khaki);
+}
+
+.nav-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+button {
+  padding: 5px 5px 0 5px;
+  width: 100px;
+  height: 50px;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  background-color: var(--khaki);
+}
+
+.tabbed {
+  background-color: var(--dripping-clr);
+  position: relative;
+}
+
+.tabbed::after {
+  content: "";
+  background-image: url(https://web.archive.org/web/20221024060550im_/https://eckben.github.io/bearysBreakfastBar/img/dripping.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -50px;
+  left: -1px;
+  width: 98px;
+  height: 50px;
+}
+
+#content {
+  margin: 50px 100px 50px 100px;
+  padding: 10px;
+  background-color: var(--khaki);
+  min-height: 100vh;
+  border-radius: 25px;
+}
+
+.design {
+  padding: 5px;
+  background-color: var(--yellow);
+  border: 10px solid var(--chocolate);
+  border-radius: 30%;
+}
+
+.heading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading1 {
+  font-weight: bold;
+  font-size: 32px;
+  position: relative;
+}
+
+.heading1::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-image: url(https://web.archive.org/web/20221024060550im_/https://eckben.github.io/bearysBreakfastBar/img/bee.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -10px;
+  left: -45px;
+  transform: scaleX(-1);
+}
+.heading1::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-image: url(https://web.archive.org/web/20221024060550im_/https://eckben.github.io/bearysBreakfastBar/img/bee.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -10px;
+}
+
+.content1,
+.hours,
+.location {
+  margin-top: 30px;
+  padding: 30px;
+}
+
+.hours,
+.location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+/* about page  */
+
+.content2 {
+  margin-top: 30px;
+}
+/* Media Quries  */
+
+@media only screen and (max-width: 765px) {
+  #content {
+    margin: 50px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #content {
+    margin: 50px 10px auto;
+  }
+}
+
+@media only screen and (max-width: 358px) {
+  .nav-icons {
+    gap: 10px;
+  }
+  .tabbed::after {
+    width: 97px;
+  }
+}
+
+@media only screen and (max-width: 402px) {
+  .heading1::after {
+    top: -10px;
+    left: 300px;
+  }
+}
+
+@media only screen and (max-width: 402px) {
+  .heading1::after {
+    top: -10px;
+    left: 300px;
+  }
+}
